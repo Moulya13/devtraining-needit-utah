@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="521e5f988322be1005a0b7d6feaad36e" label="Demo Mixed Datatypes  " max_length="40" name="x_58872_needit_demo_mixed_datatypes" type="collection">
+        <element label="Requested By" max_length="32" name="u_requested_by" reference="sys_user" type="reference"/>
+        <element default="True" label="Is Active" max_length="40" name="u_is_active" type="boolean"/>
+        <element default="None" label="Salary Amount" max_length="20" name="u_salary_amount" type="decimal"/>
+        <element default="None" label="Full Name" max_length="40" name="u_full_name" type="string"/>
+        <element default="None" label="Email" max_length="40" name="u_email" type="string"/>
+        <element choice="2" label="Request Type" max_length="40" name="u_request_type" type="choice">
+            <choice/>
+        </element>
+        <element label="Assigned To" max_length="32" name="u_assigned_to" reference="sys_user" type="reference"/>
+        <element label="Assignement Group" max_length="40" name="u_assignment_group" reference="sys_user_group" type="string"/>
+        <element default="None" label="Hire Date" max_length="40" name="u_hire_date" type="glide_date"/>
+        <element default="None" label="Record ID" max_length="40" name="u_record_id" type="integer"/>
+        <index name="index">
+            <element name="u_assigned_to"/>
+        </index>
+        <index name="index2">
+            <element name="u_requested_by"/>
+        </index>
+    </element>
+</database>
